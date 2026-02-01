@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LiDAR Taxi Sign</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">Shadi Shahat</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- SPLIT HERO (UNCHANGED) -->
+  <header class="hero-split">
+    <div class="hero-text">
+      <h1>LiDAR Taxi Sign</h1>
+      <h2>Sensing & Embedded Systems Project</h2>
+      <p>
+        Design of an New York City style taxi sign that houses two LiDARs to collect 
+        road data to advance autonomous driving technology in the North East
+      </p>
+    </div>
+
+    <div class="hero-media">
+      <img src="Taxi Sign Hero.png" alt="Taxi Sign Hero">
+    </div>
+  </header>
+
+  <!-- PROJECT CONTENT -->
+  <main class="battlebot-page">
+
+    <!-- STEP 1 -->
+    <div class="step">
+      <div class="step-media fade-in-left">
+        <img src="Taxi Sign 1.png" alt="LiDAR Taxi Sign concept">
+        <img src="Taxi Sign 2.jpg" alt="LiDAR Taxi Sign concept">
+      </div>
+
+      <div class="step-content fade-in-right">
+        <div class="step-title">Pressure Clamp Mount</div>
+        <div class="accent-line"></div>
+        <p>
+          This mount was designed to house a pressure clamp that is 
+          able to hold down the taxi sign even against the strongest winds.
+        </p>
+      </div>
+    </div>
+
+    <!-- STEP 2 -->
+    <div class="step">
+      <div class="step-media fade-in-right">
+        <img src="Taxi Sign 3.png" alt="LiDAR sensor mounting">
+        <img src="Taxi Sign 4.jpg" alt="LiDAR sensor mounting">
+      </div>
+
+      <div class="step-content fade-in-left">
+        <div class="step-title">LiDAR Mount</div>
+        <div class="accent-line"></div>
+        <p>
+          This liDAR mount mounts onto the side of the taxi sign. 
+          The liDARs are wired through the side of the frame and connect 
+          to a PCB inside the taxi sign. Data gathered from the liDARs is displayed directly on the screen. 
+        </p>
+      </div>
+    </div>
+
+    <!-- STEP 3 -->
+    <div class="step">
+      <div class="step-media fade-in-left">
+        <img src="Taxi Sign 5.jpg" alt="Microcontroller and firmware">
+      </div>
+
+      <div class="step-content fade-in-right">
+        <div class="step-title">Embedded Control</div>
+        <div class="accent-line"></div>
+        <p>
+          The final result can be seen on the left; this was a quicker project as it took only a couple of days, 
+          but it was done within a short notice to be presented at NJ Tech Week in Newark, NJ. 
+        </p>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- SCROLL ANIMATIONS -->
+  <script>
+    const faders = document.querySelectorAll('.fade-in-left, .fade-in-right');
+
+    const appearOptions = {
+      threshold: 0.2
+    };
+
+    const appearOnScroll = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        } else {
+          entry.target.classList.remove('visible');
+        }
+      });
+    }, appearOptions);
+
+    faders.forEach(fader => appearOnScroll.observe(fader));
+  </script>
+
+</body>
+</html>

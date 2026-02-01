@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ping Pong Ball Launcher</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">Shadi Shahat</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- SPLIT HERO -->
+  <header class="hero-split">
+    <div class="hero-text">
+      <h1>Ping Pong Ball Launcher</h1>
+      <h2>Mechanical Design Project</h2>
+      <p>
+        Design and fabrication of a repeatable ping pong ball launcher,
+        focused on mechanical iteration, motor control, and experimental
+        optimization for consistent performance.
+      </p>
+    </div>
+
+    <div class="hero-media">
+      <video autoplay muted loop playsinline>
+        <source src="Ping Pong Ball Launcher Hero.mp4" type="video/mp4">
+      </video>
+    </div>
+  </header>
+
+  <!-- PROJECT CONTENT -->
+  <main class="battlebot-page">
+
+    <!-- STEP 1 -->
+    <div class="step">
+      <div class="step-media fade-in-left">
+        <video autoplay muted loop playsinline>
+         <source src="Ping Pong Ball Launcher 1.mp4" type="video/mp4" >
+       </video>
+      </div>
+
+
+      <div class="step-content fade-in-right">
+        <div class="step-title">Motivation & Concept Development</div>
+        <div class="accent-line"></div>
+        <p>
+          I grew up playing ping pong, so I wanted a way to practice consistently
+          without relying on someone else at all times. So I figured the easiest way 
+          to do that is to just design a robot that does this.
+        </p>
+        <p>
+          I started by figuring out the launch mechanism, and I considered using a linear 
+          actuator, or even a numatic system, but I settled on a dual-wheel system driven 
+          by two brushed DC motors. This way, I can very easily control the speed of the 
+          ball, and in the future when I want to incorporate spin, I can vary the speed of 
+          one wheel and that would put a spin on the ball.
+        </p>
+      </div>
+    </div>
+
+    <!-- STEP 2 -->
+    <div class="step">
+      <div class="step-media stack-media fade-in-right">
+        <img src="Ping Pong Ball Launcher 2.jpeg" alt="Launcher frame">
+        <video autoplay muted loop playsinline>
+         <source src="Ping Pong Ball Launcher 3.mp4" type="video/mp4" >
+       </video>
+      </div>
+
+      <div class="step-content fade-in-left">
+        <div class="step-title">Early Prototypes & Challenges</div>
+        <div class="accent-line"></div>
+        <p>
+          I started prototyping using different sized wheels to achieve different velocities. 
+          However, the bigger the wheel, the more moment of inertia it had, and therefore the 
+          more torque it needed from the motor. I quickly realized that I must optimize my wheel geometry
+          to create a balance of high tangential velocity and low moment of inertia. Through these early prototypes, 
+          I also realized the need for a proper grippy material on the 3D printed wheels for efficient energy transfer. 
+        </p>
+        <p>
+          At this stage, I also lacked a proper testing apparatus; the 3D printed one shown would flex under load, making it difficult
+          to determine the optimal spacing between wheels for regulation ping pong balls. Nonetheless, I eventually got my first launch.
+        </p>
+      </div>
+    </div>
+
+    <!-- STEP 3 -->
+    <div class="step">
+      <div class="step-media stack-media fade-in-left">
+       <video autoplay muted loop playsinline>
+         <source src="Ping Pong Ball Launcher 5.mp4" type="video/mp4" >
+       </video>
+        <img src="Ping Pong Ball Launcher 4.JPG" alt="CNC motor fixture">
+      </div>
+
+      <div class="step-content fade-in-right">
+        <div class="step-title">Mechanical Optimization</div>
+        <div class="accent-line"></div>
+        <p>
+          Still, the launch wasn't powerful enough to be competitive. I wanted to design 
+          a robot that challenges my ping pong skills, and not just barely make the ball over the net. 
+          Through multiple iterations, I optimized wheel geometry and selected more
+          powerful motors capable of delivering the required speed and torque.
+          I CNC-machined a rigid wooden test fixture to precisely mount the motors,
+          eliminating flex and ensuring consistent alignment.
+        </p>
+        <p>
+          Using this fixture, I manually adjusted wheel spacing and experimentally
+          identified the optimal distance for consistent launches. I also applied Silicone tape
+         to the outside of the wheels to improve grip. With these improvements, the launching mechanism was close to being done. 
+        </p>
+      </div>
+    </div>
+
+    <!-- STEP 4 -->
+    <div class="step">
+      <div class="step-media fade-in-right">
+       <video autoplay muted loop playsinline>
+         <source src="Ping Pong Ball Launcher 6.mp4" type="video/mp4" >
+       </video>
+      </div>
+
+      <div class="step-content fade-in-left">
+        <div class="step-title">Electronics & Control</div>
+        <div class="accent-line"></div>
+        <p>
+          From here, I added a mechanism to control the frequency of the shots. This 
+          involved using a servo with a 3D printed arm that goes up, grabs the ball, and 
+          then feeds it through the two wheels. I added an arduino and used an external power supply
+          to power the arduino and the motors. I used a mosfet driver to control the motors with a PWM signal from the arduino.
+          I added a potentiometer as an analog input to control the speed of the wheels, and a power switch for the circuit.
+          The Frequency of the shots can also be controlled directly from the arduino code. 
+         
+        </p>
+        <p>
+          I then mounted the CNC machined apparatus to a tripod to easily control pitch and 
+          yaw when the launcher is put in front of a ping pong table.
+
+        </p>
+      </div>
+    </div>
+
+    <!-- STEP 5 -->
+    <div class="step">
+      <div class="step-media fade-in-left">
+        <img src="Ping Pong Ball Launcher 7.jpeg" alt="Testing the launcher">
+        <img src="Ping Pong Ball Launcher 8.jpeg" alt="Conference presentation">
+      </div>
+
+      <div class="step-content fade-in-right">
+        <div class="step-title">System Integration & Presentation</div>
+        <div class="accent-line"></div>
+        <p>
+          I made an enclosure out of acrylic for safety, and I housed all the electronics 
+          in a controls box that I mounted on top of the acrylic enclosure.
+          All electronics were housed in a dedicated enclosure mounted on top of the
+          launcher.   
+        </p>
+        <p>
+          The completed launcher was presented in March 2024 at a New Jersey Teachers
+          Conference at Montclair State University, where I talked about the importance 
+          of hands-on learning and its effects on students' motivation to contribute to their communities. 
+        </p>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- SCROLL ANIMATIONS -->
+<script>
+  const faders = document.querySelectorAll('.fade-in-left, .fade-in-right');
+
+  const appearOptions = {
+    threshold: 0.2
+  };
+
+  const appearOnScroll = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      } else {
+        entry.target.classList.remove('visible');
+      }
+    });
+  }, appearOptions);
+
+  faders.forEach(fader => appearOnScroll.observe(fader));
+</script>
+
+
+</body>
+</html>

@@ -1,33 +1,357 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tera-Bite | Project</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tera-BITE 3lb Battlebot</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    /* ======================
+       HERO SECTION
+    ====================== */
+    .hero {
+      position: relative;
+      height: 70vh;
+      min-height: 450px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+      background-image: url("images/hero.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.65);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      padding: 20px;
+    }
+
+    .hero h1 {
+      font-size: 3.2rem;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: #e5e7eb;
+    }
+
+    /* ======================
+       BATTLEBOT PAGE
+    ====================== */
+    .battlebot-page {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 80px 20px;
+      color: #e5e7eb;
+    }
+
+    .step {
+      display: flex;
+      align-items: center;
+      margin-bottom: 80px;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .step:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    .step img {
+      max-width: 500px;
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+    }
+
+    .step img:hover {
+      transform: scale(1.05);
+    }
+
+    .step-content {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .step-title {
+      font-size: 1.6rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: #38bdf8;
+    }
+
+    .accent-line {
+      width: 60px;
+      height: 3px;
+      background-color: #38bdf8;
+      margin-bottom: 20px;
+      border-radius: 2px;
+    }
+
+    .step p {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    /* ======================
+       SCROLL ANIMATIONS
+    ====================== */
+    .fade-in-left,
+    .fade-in-right {
+      opacity: 0;
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .fade-in-left {
+      transform: translateX(-50px);
+    }
+
+    .fade-in-right {
+      transform: translateX(50px);
+    }
+
+    .fade-in-left.visible,
+    .fade-in-right.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    /* ======================
+       RESPONSIVE
+    ====================== */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.4rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
-  <!-- NAVBAR (same as others) -->
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">Shadi Shahat</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </div>
+  </nav>
 
-  <main class="page" style="padding-top:140px; max-width:900px; margin:auto;">
-    <h1>Tera-Bite – 3lb Combat Robot</h1>
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Tera-BITE 3lb Battlebot</h1>
+      <p>Full build documentation: CAD, manufacturing, and assembly</p>
+    </div>
+  </header>
 
-    <p>
-      Tera-Bite is a 3lb battle bot I designed and built from scratch,
-      handling everything from CAD and electronics to manufacturing
-      and testing.
-    </p>
+  <!-- CONTENT -->
+  <main class="battlebot-page">
 
-    <h2>What I Worked On</h2>
-    <ul>
-      <li>Mechanical design & CAD</li>
-      <li>Weapon and drivetrain design</li>
-      <li>Electronics & wiring</li>
-      <li>Manufacturing and assembly</li>
-      <li>Testing and iteration</li>
-    </ul>
+    <div class="step">
+      <img src="Quick Overview 1.png" alt="Full CAD Model" class="fade-in-left">
+      <div class="step-content fade-in-right">
+        <div class="step-title">Quick Overview</div>
+        <div class="accent-line"></div>
+        <p>Tera-BITE is a beetlweight combat robot that features a high speed 
+          egg beater weapon, a two wheel drive system, and a 4 cell Lipo battery. 
+          In combat robotics, components aren't just designed for functionality, 
+          but also durability and resilience. So my approach for this project was generally to zoom 
+          into each subsystem individually, then design, test, and iterate on it.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <img src="Beater Bar Design 1.png" alt="Chassis assembly" class="fade-in-right">
+      <div class="step-content fade-in-left">
+        <div class="step-title">Beater Bar Design</div>
+        <div class="accent-line"></div>
+        <p>Perhaps the most important, and also most difficult to
+           design, part of a battle bot is its weapon. Designing an egg 
+           beater involves balancing a ton of variables, namely the 
+           the weight, diameter, moment of inertia, and aerodynamic drag of the beater.
+          Ultimately, the effectiveness of the beater at best conditions really comes down to 
+        the equation for energy: KE = (1/2)Iⲱ^2 + (1/2)mv^2, and the equation for bite: d = 60v/RPM.
+        The beater I designed was on the heavier side which allowed me to increase my energy output, but 
+      also had complications which I will discuss later. </p>
+      </div>
+    </div>
+
+    <div class="step">
+     <iframe
+  src="file:///C:/Users/shaha/Downloads/Portfolio/Portfolio/Motor%20Mount%20Drawing.PDF"
+  width="100%"
+  height="600"
+  class="fade-in-left"
+  style="border:none;">
+</iframe>
+
+      <div class="step-content fade-in-right">
+        <div class="step-title">Motor Mount</div>
+        <div class="accent-line"></div>
+        <p>This motor mount was a good opportunity for me to brush up on my GD&T skills and my machining skills. 
+          I made this drawing for the motor mount on solidworks and added GD&T callouts where necessary. I machined this 
+          part on the manual mill. I used a 3D printed jig to prop the mount to create the slant in the part. 
+        </p>
+      </div>
+    </div>
+
+    <div class="step">
+      <img src="Torque Transfer 1.png" alt="Motor mount" class="fade-in-right">
+      <div class="step-content fade-in-left">
+        <div class="step-title">Torque Transfer</div>
+        <div class="accent-line"></div>
+        <p> For the final iteration, I'm using an 1800 KV BLDC with a 14:24 gear reduction and a Talon 35A ESC
+          to control it. Instead of putting screws in shear, 
+          I made it so that my driven pulley keys onto the beater to transfer the torque from the belt. </p>
+      </div>
+    </div>
+
+    <div class="step">
+      <video 
+  src="Overcurrent Warning 1.mp4"
+  class="fade-in-left"
+  width="100%"
+  autoplay
+  loop
+  muted
+  playsinline>
+</video>
+<section class="data-section">
+  <h3>Weapon System Data</h3>
+  <iframe
+    src="https://docs.google.com/spreadsheets/d/e/2PACX-1vT4hWwoT9ZoTuDQfWGozCxR505VcsCZKv52ogX-uRIbgOGBGfzek5LzbBcpSOQqBCqSvuft9pDmMOXY/pubhtml?gid=1801602997&single=true"
+    width="100%"
+    height="500"
+    style="border: none;">
+  </iframe>
+
+  <p class="caption">
+    Live data table exported from Google Sheets (single tab view).
+  </p>
+</section>
+      <div class="step-content fade-in-right">
+        <div class="step-title">Overcurrent Warning</div>
+        <div class="accent-line"></div>
+        <p>After first testing the system with a 1000 KV motor, I got an overcurrent warning on the ESC which shut 
+          the motor down. So I set up an experiment in order to figure out what is causing it. I wrote down all the 
+          variables that could have caused this overcurrent warning down in a spreadsheet, changed one variable at
+          a time, and then I measured the real current draw with a wattmeter. I was then able to optimize my design 
+          to minimize mechanical friction so that the bulk of the resistance comes from aerodynamic drag rather than 
+          a poor powertrain design. In the future, I plan on running CFD simulations on my beaters before fabrication. 
+        </p>
+      </div>
+    </div>
+
+    <div class="step">
+      <img src="Drive System 1.png" alt="Weapon installation" class="fade-in-left">
+      <div class="step-content fade-in-right">
+        <div class="step-title">Drive System</div>
+        <div class="accent-line"></div>
+        <p> For my drive system, I used two geared down BLDCs controlled with a dual ESC.
+          The wheels, which are mounted directly to the motor shaft, are made of a TPU hub and 
+          a vytaflex 30A outer shell which I designed molds for and I used them to cast the wheels.
+           An important thing I kept in mind was that the wheels had to be able 
+          to reach the ground when the bot is flipped upside down, so that the bot doesn't get stuck. 
+        </p>
+      </div>
+    
+    </div>
+     <div class="step">
+      <img src="Power and Controls 1.png" alt="Weapon installation" class="fade-in-left">
+      <div class="step-content fade-in-right">
+        <div class="step-title">Power and Controls</div>
+        <div class="accent-line"></div>
+        <p> I used a drone RF transmitter and receiver to control the robot. For power, I went with an 880 mAh
+          4s liPO battery. According to some calculations, the 880 is supposed to run before the full match ends.
+          Nonetheless, I decided to go with it as it is a lighter option than higher capacity batteries, and my 
+          strategy was to try to take out the other bot faster than my battery would drain. The battery is connected
+          to a switch which I turn on with an allen key while the bot is already assembled. 
+        </p>
+      </div>
+    </div>
+
+     <div class="step">
+      
+      <video 
+  src="Chassis 1.mp4"
+  class="fade-in-left"
+  width="100%"
+  autoplay
+  loop
+  muted
+  playsinline>
+</video>
+ <img src="Chassis 2.jpeg" alt="Upright Manufacturing" class="fade-in-left">
+      <div class="step-content fade-in-right">
+        <div class="step-title">Chassis</div>
+        <div class="accent-line"></div>
+        <p> The chassis is the last subsystem and it's 
+          comprised of the top and bottom plates, the uprights (side panels), the forks, and the rear plate.
+          The top and bottom plates are made out of carbon fiber; I waterjetted the countour of the plates then 
+          designed jigs to precisely drill the holes into them. As for the uprights, I made CNC toolpaths for them 
+          using VCarve and cut them out of UHMW on a shop bot CNC. I then used two jigs to drill holes into them as they 
+          have holes in a bunch of different directions. 
+        </p>
+      </div>
+    </div>
+
+    <div class="step">
+      <img src="Competition 1.jpeg" alt="Full CAD Model" class="fade-in-left">
+      <div class="step-content fade-in-right">
+        <div class="step-title">Competition</div>
+        <div class="accent-line"></div>
+        <p>Currently, I am assembling the final prototype of Tera-BITE to compete on February 7th at 
+          National Havoc Robot League. This page will be updated again after comp. 
+        </p>
+      </div>
+    </div>
+
   </main>
+
+  <!-- SCROLL ANIMATION JS -->
+  <script>
+    const faders = document.querySelectorAll('.fade-in-left, .fade-in-right');
+
+    const appearOptions = {
+      threshold: 0.2,
+      rootMargin: "0px 0px -50px 0px"
+    };
+
+    const appearOnScroll = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        } else {
+          entry.target.classList.remove('visible');
+        }
+      });
+    }, appearOptions);
+
+    faders.forEach(fader => appearOnScroll.observe(fader));
+  </script>
 
 </body>
 </html>

@@ -346,3 +346,204 @@ body {
   font-size: 1.3rem;
   margin: 0;
 }
+
+/* ======================
+   VIDEO HERO (PROJECTS)
+====================== */
+
+
+.hero-split {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 100px 8%;
+  background: radial-gradient(circle at right, #0f172a, #020617);
+  color: #fff;
+  gap: 60px;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-text h1 {
+  font-size: clamp(3.5rem, 6vw, 5rem);
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.hero-text h2 {
+  font-size: 1.6rem;
+  color: #38bdf8;
+  margin: 15px 0;
+}
+
+.hero-text p {
+  max-width: 480px;
+  font-size: 1.1rem;
+  color: #cbd5f5;
+}
+
+.hero-media {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-media video {
+  width: 100%;
+  max-width: 520px;
+  border-radius: 14px;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.6);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .hero-split {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text p {
+    margin: 0 auto;
+  }
+}
+
+/* ======================
+   PROJECT PAGE BODY
+====================== */
+
+.battlebot-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 100px 20px;
+  color: #e5e7eb;
+}
+
+/* Project steps */
+.step {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 100px;
+  flex-wrap: wrap;
+}
+
+.step:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.step img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 14px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease;
+}
+
+.step img:hover {
+  transform: scale(1.04);
+}
+
+.step-content {
+  flex: 1;
+  min-width: 280px;
+}
+
+.step-title {
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: #38bdf8;
+  margin-bottom: 10px;
+}
+
+.accent-line {
+  width: 60px;
+  height: 3px;
+  background-color: #38bdf8;
+  border-radius: 2px;
+  margin-bottom: 20px;
+}
+
+.step p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #cbd5f5;
+}
+
+/* ======================
+   SCROLL ANIMATIONS
+====================== */
+
+.fade-in-left,
+.fade-in-right {
+  opacity: 0;
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in-left {
+  transform: translateX(-40px);
+}
+
+.fade-in-right {
+  transform: translateX(40px);
+}
+
+.fade-in-left.visible,
+.fade-in-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ======================
+   RESPONSIVE BODY
+====================== */
+
+@media (max-width: 768px) {
+  .step {
+    flex-direction: column !important;
+    text-align: center;
+  }
+
+  .accent-line {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.step-media {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  max-width: 500px;
+}
+
+.step-media img,
+.step-media video {
+  width: 100%;
+  border-radius: 14px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+.stack-media {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mixed-media {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.mixed-media .primary {
+  width: 100%;
+}
+
+.mixed-media .secondary {
+  width: 75%;
+  align-self: flex-end;
+  opacity: 0.95;
+}

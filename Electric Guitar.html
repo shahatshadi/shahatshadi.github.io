@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Electric Guitar Build</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">Shadi Shahat</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- SPLIT HERO -->
+  <header class="hero-split">
+    <div class="hero-text">
+      <h1>Electric Guitar Build</h1>
+      <h2>Design & Fabrication Project</h2>
+      <p>
+        End-to-end design and construction of a custom electric guitar,
+        focusing on woodworking, hardware integration, electronics,
+        and final setup for playability and tone.
+      </p>
+    </div>
+
+    <div class="hero-media">
+      <img src="Electric Guitar Hero.png" alt="Electric Guitar Build Hero">
+    </div>
+  </header>
+
+  <!-- PROJECT CONTENT -->
+  <main class="battlebot-page">
+
+    <!-- STEP 1 -->
+    <div class="step">
+      <div class="step-media fade-in-left">
+        <img src="Electric Guitar 1.jpeg" alt="Guitar CAD Design">
+        <img src="Electric Guitar 2.jpeg" alt="Guitar CAD Design">
+      </div>
+
+      <div class="step-content fade-in-right">
+        <div class="step-title">The Body</div>
+        <div class="accent-line"></div>
+        <p>
+          I started by printing out pictures of the body, neck, and fretboard as guides.
+          I glued the outline of the guitar body to a board of white ash. 
+          I then cut around it with a band saw and with a jig saw for the smaller crevices. 
+         Finally, I went in with a rasp to get the edges down to shape. 
+        </p>
+      </div>
+    </div>
+
+    <!-- STEP 2 -->
+<div class="step">
+  <div class="step-media mixed-media fade-in-right">
+    <img src="Electric Guitar 3.jpeg" alt="Guitar body blank" class="primary">
+    <img src="Electric Guitar 4.jpeg" alt="Guitar body blank" class="secondary">
+  </div>
+
+  <div class="step-content fade-in-left">
+    <div class="step-title">The Neck</div>
+    <div class="accent-line"></div>
+    <p>
+      I did the same for the neck but with a board of mahogany. I shaped the top of the neck and the back of it using sand paper. 
+    </p>
+  </div>
+</div>
+
+
+    <!-- STEP 3 -->
+    <div class="step">
+      <div class="step-media stack-media fade-in-left">
+       <img src="Electric Guitar 5.jpeg" alt="Guitar neck construction">
+       <img src="Electric Guitar 6.jpeg" alt="Guitar neck construction">
+     </div>
+
+     <div class="step-content fade-in-right">
+       <div class="step-title">Adding the Trussrod</div>
+       <div class="accent-line"></div>
+       <p>
+         Perhaps the hardest part of the project was creating the channel in the neck for the trussrod.
+         The channel had to be pocketed to a low tolerance to prevent long term bowing of the guitar. 
+       </p>
+     </div>
+   </div>
+
+
+    <!-- STEP 4 -->
+<div class="step">
+  <div class="step-media mixed-media fade-in-right">
+    <img src="Electric Guitar 7.jpeg" alt="Guitar electronics wiring" class="primary">
+  </div>
+
+  <div class="step-content fade-in-left">
+    <div class="step-title">Making the Fretboard</div>
+    <div class="accent-line"></div>
+    <p>
+      The fretboard I made out of rosewood. Another difficult part of the project was 
+      making sure to cut the fret slots properly and tapping in the frets correctly.
+      The freboard had to be radiused using a radius block, so I created the apparatus to the 
+      right to evenly radius the fretboard.
+    </p>
+  </div>
+</div>
+
+
+    <!-- STEP 5 -->
+    <div class="step">
+      <div class="step-media fade-in-left">
+        <img src="Electric Guitar 10.jpeg" alt="Finished electric guitar">
+        <img src="Electric Guitar 11.jpeg" alt="Finished electric guitar">
+      </div>
+
+      <div class="step-content fade-in-right">
+        <div class="step-title">Finish</div>
+        <div class="accent-line"></div>
+        <p>
+          Unfortunately, my internship at the makerspace ended before I could finish the project. 
+          My mentors at the makerspace were able to take over the parts I left for them, pocket out 
+          the body, paint the wood, and install the hardware, marking an end to this project.
+        </p>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- SCROLL ANIMATIONS -->
+  <script>
+    const faders = document.querySelectorAll('.fade-in-left, .fade-in-right');
+
+    const appearOptions = {
+      threshold: 0.2
+    };
+
+    const appearOnScroll = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        } else {
+          entry.target.classList.remove('visible');
+        }
+      });
+    }, appearOptions);
+
+    faders.forEach(fader => appearOnScroll.observe(fader));
+  </script>
+
+</body>
+</html>
