@@ -11,47 +11,25 @@
 
   <link rel="stylesheet" href="style.css" />
 
+  <header class="hero-split">
+    <div class="hero-text">
+      <h1> Tera-BITE the 3 lb Bot</h1>
+      <h2>Combat Robotics Project</h2>
+      <p>
+        Design, manufacturing, and assembly of a the 3 pound battle bot Tera-BITE leading to February NHRL compeition.
+      </p>
+    </div>
+
+    <div class="hero-media">
+      <video autoplay muted loop playsinline>
+        <source src="Tera-bite hero.mp4" type="video/mp4">
+      </video>
+    </div>
+  </header>
+  
+  
   <style>
-    /* ======================
-       HERO SECTION
-    ====================== */
-    .hero {
-      position: relative;
-      height: 70vh;
-      min-height: 450px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: #fff;
-      background-image: url("images/hero.jpg");
-      background-size: cover;
-      background-position: center;
-    }
-
-    .hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.65);
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 1;
-      max-width: 800px;
-      padding: 20px;
-    }
-
-    .hero h1 {
-      font-size: 3.2rem;
-      margin-bottom: 15px;
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      color: #e5e7eb;
-    }
+    
 
     /* ======================
        BATTLEBOT PAGE
@@ -231,9 +209,9 @@
     <div class="step">
       <img src="Torque Transfer 1.png" alt="Motor mount" class="fade-in-right">
       <div class="step-content fade-in-left">
-        <div class="step-title">Torque Transfer</div>
+        <div class="step-title">Power Transfer</div>
         <div class="accent-line"></div>
-        <p> For the final iteration, I'm using an 1800 KV BLDC with a 14:24 gear reduction and a Talon 35A ESC
+        <p> For the final iteration, I'm using an 1800 KV BLDC with a 13:23 gear reduction and a Talon 35A ESC
           to control it. Instead of putting screws in shear, 
           I made it so that my driven pulley keys onto the beater to transfer the torque from the belt. </p>
       </div>
@@ -329,15 +307,24 @@
     </div>
 
     <div class="step">
-      <img src="Competition 1.jpeg" alt="Full CAD Model" class="fade-in-left">
-      <div class="step-content fade-in-right">
-        <div class="step-title">Competition</div>
-        <div class="accent-line"></div>
-        <p>Currently, I am assembling the final prototype of Tera-BITE to compete on February 7th at 
-          National Havoc Robot League. This page will be updated again after comp. 
-        </p>
-      </div>
-    </div>
+  <div class="step-media fade-in-left">
+    <video autoplay muted loop playsinline>
+      <source src="Competition 1.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <div class="step-content fade-in-right">
+    <div class="step-title">Competition</div>
+    <div class="accent-line"></div>
+    <p>
+     My first competition was on February 7th, 2026, and it could 
+     not have gone better. Even though it was my first event, I was
+      able to place top 8 which qualifies me to enter Pro Tour on May 16th, 
+      with a record of 4:1. The clip to the left is from my second fight 
+      against a bot called Crab Rangoon. 
+    </p>
+  </div>
+</div>
 
   </main>
 
