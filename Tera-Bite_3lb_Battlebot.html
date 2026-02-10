@@ -28,100 +28,17 @@
   </header>
   
   
-  <style>
-    
+  
 
-    /* ======================
-       BATTLEBOT PAGE
-    ====================== */
-    .battlebot-page {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 80px 20px;
-      color: #e5e7eb;
-    }
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LLKW7RNK7S"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-    .step {
-      display: flex;
-      align-items: center;
-      margin-bottom: 80px;
-      gap: 40px;
-      flex-wrap: wrap;
-    }
-
-    .step:nth-child(even) {
-      flex-direction: row-reverse;
-    }
-
-    .step img {
-      max-width: 500px;
-      width: 100%;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-      transition: transform 0.3s ease;
-    }
-
-    .step img:hover {
-      transform: scale(1.05);
-    }
-
-    .step-content {
-      flex: 1;
-      min-width: 280px;
-    }
-
-    .step-title {
-      font-size: 1.6rem;
-      font-weight: 600;
-      margin-bottom: 10px;
-      color: #38bdf8;
-    }
-
-    .accent-line {
-      width: 60px;
-      height: 3px;
-      background-color: #38bdf8;
-      margin-bottom: 20px;
-      border-radius: 2px;
-    }
-
-    .step p {
-      font-size: 1rem;
-      line-height: 1.6;
-    }
-
-    /* ======================
-       SCROLL ANIMATIONS
-    ====================== */
-    .fade-in-left,
-    .fade-in-right {
-      opacity: 0;
-      transition: opacity 0.8s ease, transform 0.8s ease;
-    }
-
-    .fade-in-left {
-      transform: translateX(-50px);
-    }
-
-    .fade-in-right {
-      transform: translateX(50px);
-    }
-
-    .fade-in-left.visible,
-    .fade-in-right.visible {
-      opacity: 1;
-      transform: translateX(0);
-    }
-
-    /* ======================
-       RESPONSIVE
-    ====================== */
-    @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 2.4rem;
-      }
-    }
-  </style>
+  gtag('config', 'G-LLKW7RNK7S');
+</script>
 </head>
 <body>
 
@@ -137,13 +54,7 @@
     </div>
   </nav>
 
-  <!-- HERO -->
-  <header class="hero">
-    <div class="hero-content">
-      <h1>Tera-BITE 3lb Battlebot</h1>
-      <p>Full build documentation: CAD, manufacturing, and assembly</p>
-    </div>
-  </header>
+  
 
   <!-- CONTENT -->
   <main class="battlebot-page">
